@@ -1,0 +1,79 @@
+:root{
+    --bg: #f6f8fb;
+    --card-bg: #ffffff;
+    --muted: #6c757d;
+    --primary: #0d6efd;
+    --accent: #20c997;
+    --border-weak: rgba(13,110,253,0.08);
+    --warning: #ffc107;
+}
+
+/* Base spacing for action buttons */
+.btn-action { margin: 5px; }
+
+/* Control panel styling - unified palette */
+.control-panel { border-radius: 12px; }
+.control-panel .card { border: 0; border-radius: 12px; box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+.control-panel .card-body { background: var(--card-bg); padding: 18px; }
+.control-panel .card-title { font-weight: 700; letter-spacing: 0.2px; margin-bottom: 12px; color: var(--primary); }
+
+/* Toolbar layout */
+.controls-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+/* Tight input-group that visually wraps input + button */
+.input-group.custom-tight { display: flex; align-items: stretch; gap: 0; padding: 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-weak); background: var(--card-bg); }
+.input-group.custom-tight .form-control { border: 0; box-shadow: none; border-radius: 0; height: 40px; color: #111827; }
+.input-group.custom-tight .btn { margin: 0 !important; height: 40px; border-left: 1px solid rgba(0,0,0,0.06); border-radius: 0; padding-left: 10px; padding-right: 10px; }
+
+/* Controls sizing */
+.controls .form-select, .controls .form-control { height: 40px; min-width: 160px; color: #0f172a; }
+.controls .btn-outline-primary { height: 40px; color: var(--primary); border-color: var(--border-weak); }
+.controls .bi { vertical-align: -2px; }
+
+/* Make badges and accents cohesive */
+.badge.bg-primary { background-color: var(--primary); }
+.badge.bg-secondary { background-color: var(--accent); }
+
+/* Filter button: prevent overflow and make text fit */
+.controls .btn-outline-primary {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 80px;
+}
+.controls .btn-outline-primary .bi { margin-right: 4px; }
+
+/* Utility class for control items (selects) */
+.control-item { min-width: 140px; }
+
+/* Responsive: stack toolbar vertically on small screens */
+@media (max-width: 768px) {
+    .controls-toolbar { flex-direction: column; align-items: stretch; }
+    .controls-toolbar > * { width: 100%; }
+    .controls { display: flex; gap: 8px; flex-direction: column; }
+    .controls .form-select, .controls .form-control, .input-group.custom-tight, .controls .btn { width: 100%; min-width: 0; }
+    .input-group.custom-tight .btn { border-left: none; border-top: 1px solid rgba(0,0,0,0.06); }
+}
+
+/* Hover / focus state: Filtrer devient plein bleu (primary) */
+.controls .btn-outline-primary {
+    transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.controls .btn-outline-primary:hover,
+.controls .btn-outline-primary:focus,
+.controls .btn-outline-primary:active {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 4px 12px rgba(13,110,253,0.12);
+}
+
+/* centrer le texte de la navbar */
+.navbar .navbar-brand {
+    margin: 0 auto;
+}
