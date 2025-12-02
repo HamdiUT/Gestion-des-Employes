@@ -30,7 +30,7 @@
                             <button class="btn btn-success btn-action" onclick="calculateTotalSalaries()">
                                 <i class="bi bi-calculator"></i> Calculer les salaires
                             </button>
-                            <!-- Bouton "Employés RH" supprimé -->
+
                             <div class="input-group custom-tight control-search">
                                 <input id="employeeIdInput" type="number" min="1" class="form-control" placeholder="ID employé" onkeydown="if(event.key==='Enter') findEmployeeById(this.value)">
                                 <button class="btn btn-warning" type="button" onclick="findEmployeeById(document.getElementById('employeeIdInput').value)">
@@ -44,7 +44,7 @@
                                     <select id="specializationSelect" class="form-select control-item">
                                         <option value="">Toutes les spécialisations</option>
                                     </select>
-                                    <button class="btn btn-outline-primary btn-action" type="button" onclick="filterByDepartmentAndSpecialization()">
+                                    <button class="btn btn-outline-primary btn-action btn-filter-wide" type="button" onclick="filterByDepartmentAndSpecialization()">
                                         <i class="bi bi-filter"></i> Filtrer
                                     </button>
                                 </div>

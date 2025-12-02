@@ -48,6 +48,46 @@
 }
 .controls .btn-outline-primary .bi { margin-right: 4px; }
 
+/* Variante spécifique plus large pour le bouton "Filtrer" : fond bleu par défaut
+   et hover légèrement plus foncé (cohérent avec les autres boutons) */
+.controls .btn-filter-wide {
+    min-width: 120px;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(13,110,253,0.12);
+    transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.controls .btn-filter-wide:hover,
+.controls .btn-filter-wide:focus,
+.controls .btn-filter-wide:active {
+    background-color: #0b5ed7 !important; /* légèrement plus foncé que --primary */
+    color: #fff !important;
+    border-color: #0b5ed7 !important;
+    box-shadow: 0 6px 16px rgba(11,94,215,0.14) !important;
+}
+
+/* Règle plus spécifique pour écraser toute autre règle (si besoin) */
+.controls button.btn-filter-wide,
+.controls button.btn-filter-wide:link,
+.controls button.btn-filter-wide:visited {
+    background-image: none !important;
+    background-color: var(--primary) !important;
+    color: #fff !important;
+    border-color: var(--primary) !important;
+}
+.controls button.btn-filter-wide:hover,
+.controls button.btn-filter-wide:focus,
+.controls button.btn-filter-wide:active {
+    background-image: none !important;
+    background-color: #0b5ed7 !important;
+    color: #fff !important;
+    border-color: #0b5ed7 !important;
+    box-shadow: 0 6px 16px rgba(11,94,215,0.14) !important;
+}
+
 /* Utility class for control items (selects) */
 .control-item { min-width: 140px; }
 
