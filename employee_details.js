@@ -163,17 +163,6 @@ function calculateTotalSalaries() {
     showAlert('Calcul du total des salaires effectué', 'info');
 }
 
-// Fonction pour afficher les employés RH
-function displayHREmployees() {
-    const hrEmployees = employees.filter(employee => employee.department === 'HR');
-    if (hrEmployees.length > 0) {
-        document.getElementById('employeesDetails').innerHTML = createTable(hrEmployees);
-        showAlert(`${hrEmployees.length} employé(s) trouvé(s) dans le département RH`, 'success');
-    } else {
-        document.getElementById('employeesDetails').innerHTML = '';
-        showAlert('Aucun employé trouvé dans le département RH', 'warning');
-    }
-}
 
 // Fonction pour trouver un employé par ID
 function findEmployeeById(employeeId) {
